@@ -10,8 +10,8 @@ verilator   -Wall --trace \
             --exe verify.cpp \
             --prefix "Vdut" \
             -o Vdut \
-            -CFLAGS "-std=c++17 -isystem $(brew --prefix googletest)/include" \
-            -LDFLAGS "-L$(brew --prefix googletest)/lib -lgtest -lgtest_main -lpthread" \
+            -CFLAGS "-std=c++17" \
+            -LDFLAGS "-lgtest -lgtest_main -lpthread" \
 
 # Build C++ project with automatically generated Makefile
 make -j -C obj_dir/ -f Vdut.mk
